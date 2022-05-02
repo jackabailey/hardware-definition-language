@@ -1,0 +1,32 @@
+CHIP CW1Q1 {
+    IN a, b, x, y;
+    OUT o;
+
+PARTS:
+
+Not(x=a, out=nota);
+Not(x=b, out=notb);
+Not(x=x, out=notx);
+Not(x=y, out=noty);
+
+And(x=nota, y=b, out=notaandb);
+And(x=x, y=noty, out=xandnoty);
+And(x=notaandb, y=xandnoty, out=notaandbandxandnoty);
+
+And(x=notb, y=x, out=notbandx);
+And(x=notbandx, y=y, out=notbandxandy);
+
+And(x=b, y=notx, out=bandnotx);
+And(x=bandnotx, y=y, out=bandnotxandy);
+
+And(x=a, y=notbandx, out=aandnotbandx);
+
+And(x=a, y=bandnotx, out=aandbandnotx);
+
+And(x=a, y=y, out=aandy);
+
+Or(x=notaandbandxandnoty,y=notbandxandy,out=w);
+Or(x=w,y=bandnotxandy,out=k);
+Or(x=k,y=aandnotbandx,out=l);
+Or(x=l,y=aandbandnotx,out=z);
+Or(x=z,y=aandy,out=o);}

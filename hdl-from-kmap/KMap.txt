@@ -1,0 +1,30 @@
+The HDL in this folder represents the hardware implementation of the following Karnaugh Map
+
+       |  !X.!Y | !X.Y  |  X.Y  |  X.!Y
+!A.!B  |   0   |   0   |   1   |   0
+!A.B   |   0   |   1   |   0   |   1
+A.B    |   1   |   1   |   1   |   0
+A.!B   |   0   |   1   |   1   |   1
+
+This Equates to the truth table:
+
+|   a   |   b   |   x   |   y   |   o   |
+-----------------------------------------
+|   0   |   0   |   0   |   0   |   0   |
+|   0   |   0   |   0   |   1   |   0   |
+|   0   |   0   |   1   |   0   |   0   |
+|   0   |   0   |   1   |   1   |   1   |
+|   0   |   1   |   0   |   0   |   0   |
+|   0   |   1   |   0   |   1   |   1   |
+|   0   |   1   |   1   |   0   |   1   |
+|   0   |   1   |   1   |   1   |   0   |
+|   1   |   0   |   0   |   0   |   0   |
+|   1   |   0   |   0   |   1   |   1   |
+|   1   |   0   |   1   |   0   |   1   |
+|   1   |   0   |   1   |   1   |   1   |
+|   1   |   1   |   0   |   0   |   1   |
+|   1   |   1   |   0   |   1   |   1   |
+|   1   |   1   |   1   |   0   |   0   |
+|   1   |   1   |   1   |   1   |   1   |
+
+This truth table is contained in the KMapTable.cmp file for testing the HDL written
