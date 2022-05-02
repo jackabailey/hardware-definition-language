@@ -1,0 +1,11 @@
+ CHIP AlgebraToHDL {
+    IN a, b, c;
+    OUT f;
+    
+PARTS: 
+
+    Not(x=c, out=notc);
+    And(x=a, y=notc, out=aandnotc);
+    Or(x=aandnotc, y=b, out=f);
+    
+}

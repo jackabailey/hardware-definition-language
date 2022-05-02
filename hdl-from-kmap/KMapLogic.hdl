@@ -1,4 +1,4 @@
-CHIP CW1Q1 {
+CHIP KMapLogic {
     IN a, b, x, y;
     OUT o;
 

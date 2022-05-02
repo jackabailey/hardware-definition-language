@@ -1,0 +1,7 @@
+The algrbra which the HDL in this file mimics is:
+
+(a + b + c) (a + b + ~c) (~a + b + ~c)
+
+In minimal form, this equates to: 
+
+a AND NOT c OR b
