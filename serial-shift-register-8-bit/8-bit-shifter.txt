@@ -1,0 +1,18 @@
+A shift register being a sequential logic circuit, processes, in order, a set of inputs...
+
+an 8-bit shift register would contain 8 bits, say a-h which in order have bits travel 'across them', as so...
+
+input:    output:
+     1    0 0 0 0 0 0 0 0
+     0    1 0 0 0 0 0 0 0
+     1    0 1 0 0 0 0 0 0
+     1    1 0 1 0 0 0 0 0
+     1    1 1 0 1 0 0 0 0
+
+ and so on...
+
+ The HDL file in this directory is a hardware implementation of this shift register, using an input of any length.
+
+ Because this shift register is serial as opposed to parallel, each clock cycle will shift the input by 1 bit.
+
+ NOTE: This shift register could be scalable to any size desired by increasing the number of DFF's in the HDL code.

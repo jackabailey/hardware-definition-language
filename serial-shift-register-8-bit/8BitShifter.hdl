@@ -1,0 +1,16 @@
+CHIP 8BitShifter {
+IN in;
+OUT out[8];
+
+PARTS:
+
+     DFF(x=x, out=flip1, out=out[0]);
+     DFF(x=flip1, out=flip2, out=out[1]);
+     DFF(x=flip2, out=flip3, out=out[2]);
+     DFF(x=flip3, out=flip4, out=out[3]);
+     DFF(x=flip4, out=flip5, out=out[4]);
+     DFF(x=flip5, out=flip6, out=out[5]);
+     DFF(x=flip6, out=flip7, out=out[6]);
+     DFF(x=flip7, out=flip8, out=out[7]);
+
+}
